@@ -44,6 +44,8 @@ body {
     margin-inline: .5rem;
     font-size: var(--fs-100);
     font-family: var(--ff-default);
+    display: grid;
+    place-items: center;
 }
 
 
