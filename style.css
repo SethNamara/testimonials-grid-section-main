@@ -1,0 +1,195 @@
+:root {
+    --clr-primary-100: hsl(210, 46%, 95%);
+
+    --clr-secondary-100: hsl(263, 55%, 52%);
+    --clr-secondary-200: hsl(217, 19%, 35%);
+    --clr-secondary-300: hsl(0, 0%, 100%);
+    --clr-secondary-400: hsl(219, 29%, 14%);
+
+    --clr-accent-100: hsl(0, 0%, 81%);
+    --clr-accent-200: hsl(210, 46%, 95%);
+
+    --ff-default: 'Barlow Semi Condensed',sans-serif;
+
+    --fw-regualr: 500;
+    --fw-bold: 600;
+
+    --fs-100: 13px;
+    --fs-200: 1rem;
+    --fs-300: 20px;
+    --fs-400: 1.5rem;
+}
+
+/* === Reset styling === */
+* {
+    margin: 0;
+    font: inherit;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+img,
+svg,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* === General styling === */
+body {
+    background-color: var(--clr-primary-100);
+    margin-inline: .5rem;
+    font-size: var(--fs-200);
+    font-family: var(--ff-default);
+}
+
+
+.hero {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.card:nth-child(1) {
+    grid-area: one;
+}
+
+.card:nth-child(2) {
+    grid-area: two;
+}
+
+.card:nth-child(3) {
+    grid-area: three;
+}
+
+.card:nth-child(4) {
+    grid-area: four;
+}
+
+.card:nth-child(5) {
+    grid-area: five;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: grid;
+    gap: .3rem;
+}
+
+.picture  {
+    max-width: 2.5rem;
+}
+
+.picture img {
+    border-radius: 50%;
+}
+
+.card:first-child .picture img {
+    border: 2px solid var(--clr-accent-100);
+}
+
+.card:nth-child(4) .picture img {
+    border: 2px solid var(--clr-secondary-100);
+}
+
+.graduate {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.graduate_details span {
+    display: block;
+    color: var(--clr-secondary-200);
+}
+
+.card:first-child{
+    background-color: var(--clr-secondary-100);
+    color: var(--clr-accent-200);
+}
+
+.card:first-child .graduate_details span{
+    color: var(--clr-accent-100);
+}
+
+.card:nth-child(2) {
+    background-color: var(--clr-secondary-200);
+    color: var(--clr-accent-200);
+}
+
+.card:nth-child(2) .graduate_details span {
+    color: var(--clr-accent-100);
+}
+
+.card:nth-child(3),
+.card:nth-child(5) {
+    background-color: var(--clr-secondary-300);
+    color: var(--clr-secondary-200);
+}
+
+.card:nth-child(3) .graduate_details span {
+    color: var(--clr-accent-100);
+}
+
+.card:nth-child(5) .graduate_details span{
+    color: var(--clr-accent-100);
+}
+
+.graduate_role {
+    color: var(--clr-accent-100);
+}
+
+.card:nth-child(4) {
+    background-color: var(--clr-secondary-400);
+    color: var(--clr-accent-200);
+}
+
+.graduate_testimony {
+    display: grid;
+    gap: .5rem;
+    line-height: 1.4;
+}
+
+.graduate_comment {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+}
+
+.graduate_role {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-regualr);
+}
+
+@media (min-width:700px) {
+    .hero {
+        max-width: 70rem;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+        'one one'
+        'two four'
+        'three four'
+        'five five';
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width:1400px) {
+    .hero {
+        grid-template-areas:
+        'one one two five'
+        'three four four five';
+    }
+}
