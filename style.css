@@ -14,10 +14,9 @@
     --fw-regualr: 500;
     --fw-bold: 600;
 
-    --fs-100: 13px;
+    --fs-100: 0.8125rem;
     --fs-200: 1rem;
-    --fs-300: 20px;
-    --fs-400: 1.5rem;
+    --fs-300: 1.2rem;
 }
 
 /* === Reset styling === */
@@ -43,7 +42,7 @@ picture {
 body {
     background-color: var(--clr-primary-100);
     margin-inline: .5rem;
-    font-size: var(--fs-200);
+    font-size: var(--fs-100);
     font-family: var(--ff-default);
 }
 
@@ -109,6 +108,10 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.graduate_details {
+    font-size: var(--fs-200);
 }
 
 .graduate_details span {
